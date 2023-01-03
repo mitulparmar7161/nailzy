@@ -15,23 +15,23 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->integer('mobile')->unique();
-            $table->string('image');
-            $table->string('role');
+            $table->string('name')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->bigInteger('mobile')->unique()->nullable();
+            $table->string('image')->nullable();
+            $table->string('role')->nullable();
             $table->string('device_token')->nullable();
             $table->string('device_type')->nullable();
-            $table->boolean('notification')->default(1);
-            $table->string('salon_type');
-            $table->string('address');
-            $table->integer('salon_id');
-            $table->string('status');
-            $table->string('service');
-            $table->string('lat_long');
+            $table->boolean('notification')->default(1)->nullable();
+            $table->string('salon_type')->nullable();
+            $table->string('address')->nullable();
+            $table->integer('salon_id')->nullable();
+            $table->string('status')->nullable();
+            $table->string('service')->nullable();
+            $table->string('lat_long')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('password')->nullable();
+            $table->rememberToken()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

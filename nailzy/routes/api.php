@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ use App\Http\Controllers\auth\AuthController;
 
 Route::post('registercustomer', [AuthController::class, 'registercustomer']);
 
-Route::post('login', [RegisterController::class, 'login']);
+// Route::post('login', [AuthController::class, 'login']);
      
 // Route::middleware('auth:api')->group( function () {
 
