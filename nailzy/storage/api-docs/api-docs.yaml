@@ -111,14 +111,14 @@
                 requestBody:
                     required: true
                     content:
-                        mediaType/form:
+                        appication/json:
                             schema:
                                 $ref: '#/components/schemas/login'
                 responses: 
                     200: 
                         description: A User object
                         content:
-                           mediaType/form:
+                           application/json:
                                 schema:
                                     $ref: '#/components/responses/login'
                                 
@@ -135,7 +135,38 @@
                         description: Forbidden
 
         
-            
+        /api/logout/:
+            post: 
+                tags: 
+                    - Logout
+                summary: Logout
+                security:
+                    - passport: []
+                requestBody:
+                    required: true
+                    content:
+                        appication/json:
+                            schema:
+                                $ref: '#/components/schemas/logout'
+                responses: 
+                    200: 
+                        description: A User object
+                        content:
+                           application/json:
+                                schema:
+                                    $ref: '#/components/responses/registercustomer'
+                                
+                    401: 
+                        description: Unauthenticated
+                    
+                    400: 
+                        description: Bad Request
+                    
+                    404: 
+                        description: not found
+                    
+                    403: 
+                        description: Forbidden
         
     
     components: 
@@ -168,7 +199,7 @@
                     role:
                         type: string
                         description: 'User Last Name'    
-                        example: 'Parmar'
+                        example: 'customer'
                     device_token: 
                         type: string
                         description: device token
@@ -258,7 +289,7 @@
                     role:
                         type: string
                         description: 'User Last Name'    
-                        example: 'Parmar'
+                        example: 'customer'
                     service:
                         type: string
                         description: employee service
@@ -284,6 +315,14 @@
                         type: string
                         description: 'User Password'
                         example: ''
+
+            logout:
+                type: object
+                properties:
+                    token:  
+                        type: string
+                        description: 'User Auth Token'
+
 
         responses:
             registercustomer:
@@ -375,22 +414,18 @@
                                 type: string
                                 description: 'User Auth Token'
                                 example: 'kjFD1227tqwuisajbbvdi3qrisujbd8197wiahvsd6552rw98oaudsp8gf2w8teouagdo88lliaksytd7816tukwtdsaoy298wy9d10982hcoxcwc'   
-                            fname:  
+                            name:  
                                 type: string
-                                description: 'User Fname'
-                                example: 'Mitul'
-                            lname:
-                                type: string
-                                description: 'User Lname' 
-                                example: 'Parmar'  
+                                description: 'User name'
+                                example: 'Mitul' 
                             email: 
                                 type: string
                                 description: 'User Email'
                                 example: "mitul1@gmail.com"
-                            contact:
-                                type: integer
-                                description: 'User Contact'
-                                example: 9909935387
+                            role:
+                                type: string
+                                description: 'User role'
+                                example: 'salon'
                     status: 
                         type: integer
                         description: 'Status code'
