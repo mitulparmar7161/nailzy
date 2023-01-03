@@ -38,6 +38,37 @@
                     
                     403: 
                         description: Forbidden
+        
+
+        /api/registersalon/: 
+            post: 
+                tags: 
+                    - Register      
+                summary: Register salon
+                requestBody: 
+                    required: true
+                    content: 
+                        multipart/form-data: 
+                            schema: 
+                                $ref: '#/components/schemas/registersalon'
+                responses: 
+                    201: 
+                        description: Success
+                        content: 
+                            application/json:
+                                schema:
+                                    $ref: '#/components/responses/registercustomer'
+                    401: 
+                        description: Unauthenticated
+                    
+                    400: 
+                        description: Bad Request
+                    
+                    404: 
+                        description: not found
+                    
+                    403: 
+                        description: Forbidden
                     
                 
         /api/login/: 
@@ -101,6 +132,62 @@
                         type: file
                         description: 'User Image'
                         example: "/image/aksgd.jpg"
+
+                    role:
+                        type: string
+                        description: 'User Last Name'    
+                        example: 'Parmar'
+                    device_token: 
+                        type: string
+                        description: device token
+                        example: 8123tojsags76761twjsagi61fslqj1we   
+                    device_type:
+                        type: string  
+                        description: device type
+                        example: apple
+                    status_code: 
+                        type: integer
+                        description: 'Status code'
+                        example: 200
+                    message:
+                        type: string
+                        description: 'Message'
+                        example: 'Success'
+
+            registersalon:
+                type: object
+                properties:
+      
+                    name:
+                        type: string
+                        description: 'User First Name'
+                        example: 'Mitul'
+                    email:
+                        type: string
+                        description: 'User Email'
+                        example: 'mitul@gmail.com'
+                    mobile: 
+                        type: integer
+                        description: 'User Contact'
+                        example: 9909935387
+                    password:
+                        type: string
+                        description: 'User Password'
+                        example: "password@123"
+                    image:
+                        type: file
+                        description: 'User Image'
+                        example: "/image/aksgd.jpg"
+
+                    salon_type:
+                        type: string
+                        description: 'service type'
+                        example: 'home'
+
+                    address:
+                        type: string
+                        description: 'salon address'
+                        example: '7-shyam 36'
 
                     role:
                         type: string

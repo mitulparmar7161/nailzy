@@ -58,7 +58,7 @@ class AuthController extends BaseController
         'role' => 'required|string',
         
     ]);
-
+    dd($request->address);
     if ($validator->fails()) {
         return $this->sendError('Validation Error.', $validator->errors()); 
     }
