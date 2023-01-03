@@ -1,0 +1,273 @@
+
+    openapi: 3.0.0
+    info: 
+        title: TEST
+        description: 'L5 Swagger OpenApi description'
+        version: 1.0.0
+    servers:
+        - description: 'SwaggerHub API Auto Mocking'
+          url: http://127.0.0.1:8000
+
+    paths:         
+        /api/registercustomer/: 
+            post: 
+                tags: 
+                    - Register      
+                summary: Register Customer
+                requestBody: 
+                    required: true
+                    content: 
+                        multipart/form-data: 
+                            schema: 
+                                $ref: '#/components/schemas/registercustomer'
+                responses: 
+                    201: 
+                        description: Success
+                        content: 
+                            application/json:
+                                schema:
+                                    $ref: '#/components/responses/registercustomer'
+                    401: 
+                        description: Unauthenticated
+                    
+                    400: 
+                        description: Bad Request
+                    
+                    404: 
+                        description: not found
+                    
+                    403: 
+                        description: Forbidden
+                    
+                
+        /api/login/: 
+            post: 
+                tags: 
+                    - Login
+                summary: Login
+                requestBody:
+                    required: true
+                    content:
+                        mediaType/form:
+                            schema:
+                                $ref: '#/components/schemas/login'
+                responses: 
+                    200: 
+                        description: A User object
+                        content:
+                           mediaType/form:
+                                schema:
+                                    $ref: '#/components/responses/login'
+                                
+                    401: 
+                        description: Unauthenticated
+                    
+                    400: 
+                        description: Bad Request
+                    
+                    404: 
+                        description: not found
+                    
+                    403: 
+                        description: Forbidden
+
+        
+            
+        
+    
+    components: 
+        schemas:
+            registercustomer:
+                type: object
+                properties:
+      
+                    name:
+                        type: string
+                        description: 'User First Name'
+                        example: 'Mitul'
+                    email:
+                        type: string
+                        description: 'User Email'
+                        example: 'mitul@gmail.com'
+                    mobile: 
+                        type: integer
+                        description: 'User Contact'
+                        example: 9909935387
+                    password:
+                        type: string
+                        description: 'User Password'
+                        example: "password@123"
+                    image:
+                        type: file
+                        description: 'User Image'
+                        example: "/image/aksgd.jpg"
+
+                    role:
+                        type: string
+                        description: 'User Last Name'    
+                        example: 'Parmar'
+                    device_token: 
+                        type: string
+                        description: device token
+                        example: 8123tojsags76761twjsagi61fslqj1we   
+                    device_type:
+                        type: string  
+                        description: device type
+                        example: apple
+                    status_code: 
+                        type: integer
+                        description: 'Status code'
+                        example: 200
+                    message:
+                        type: string
+                        description: 'Message'
+                        example: 'Success'
+
+            login:
+                type: object
+                properties:
+                    email:  
+                        type: string
+                        description: 'User Email'
+                        example: '@gmail.com'
+                    password:
+                        type: string
+                        description: 'User Password'
+                        example: ''
+
+        responses:
+            registercustomer:
+                type: object
+                properties:
+                    id:
+                        type: integer
+                        description: user id
+                        example: 1
+                    name:
+                        type: string
+                        description: 'User First Name'
+                        example: 'Mitul'
+                    email:
+                        type: string
+                        description: 'User Email'
+                        example: 'mitul@gmail.com'
+                    mobile: 
+                        type: integer
+                        description: 'User Contact'
+                        example: 9909935387
+                    password:
+                        type: string
+                        description: 'User Password'
+                        example: "password@123"
+                    image:
+                        type: file
+                        description: 'User Image'
+                        example: "/image/aksgd.jpg"
+                    token:  
+                        type: string
+                        description: 'User Auth Token'
+                        example: 'kjFD1227tqwuisajbbvdi3qrisujbd8197wiahvsd6552rw98oaudsp8gf2w8teouagdo88lliaksytd7816tukwtdsaoy298wy9d10982hcoxcwc' 
+                    status:
+                        type: string
+                        description: 'Active status'
+                        example: 'Active'
+                    role:
+                        type: string
+                        description: 'User Last Name'    
+                        example: 'Parmar'
+      
+
+                    notification:
+                        type: bolean
+                        description: 'notification status'
+                        example: 1
+                    device_toklen: 
+                        type: string
+                        description: device token
+                        example: 8123tojsags76761twjsagi61fslqj1we   
+                    device_type:
+                        type: string  
+                        description: device type
+                        example: apple
+                   
+                    created_at:
+                        type: time
+                        description: 'created time'
+                        example: '2222/22/22 10:00:00'  
+                    updated_at:
+                        type: time
+                        description: 'updated time'
+                        example: '2222/22/22 10:00:00' 
+                    deleted:
+                        type: time
+                        description: 'deleted time'
+                        example: '2222/22/22 10:00:00'     
+                    status_code: 
+                        type: integer
+                        description: 'Status code'
+                        example: 200
+                    message:
+                        type: string
+                        description: 'Message'
+                        example: 'Success'
+                    
+            login:
+                type: object
+                properties:
+                    success:
+                        type: bolean
+                        description: 'Success'
+                        example: true
+                    data: 
+                        type: object
+                        properties:
+                            token:  
+                                type: string
+                                description: 'User Auth Token'
+                                example: 'kjFD1227tqwuisajbbvdi3qrisujbd8197wiahvsd6552rw98oaudsp8gf2w8teouagdo88lliaksytd7816tukwtdsaoy298wy9d10982hcoxcwc'   
+                            fname:  
+                                type: string
+                                description: 'User Fname'
+                                example: 'Mitul'
+                            lname:
+                                type: string
+                                description: 'User Lname' 
+                                example: 'Parmar'  
+                            email: 
+                                type: string
+                                description: 'User Email'
+                                example: "mitul1@gmail.com"
+                            contact:
+                                type: integer
+                                description: 'User Contact'
+                                example: 9909935387
+                    status: 
+                        type: integer
+                        description: 'Status code'
+                        example: 200
+                    message:
+                        type: string
+                        description: 'Message'
+                        example: 'Success'                  
+           
+                        
+                       
+
+        securitySchemes: 
+            passport: 
+                type: apiKey
+                description: Laravel passport oauth2 security.      <br><br> <h4> EXAMPLE - Bearer YourToken </h4><br>
+                in: header
+                name: authorization
+                scheme: https
+                flows: 
+                    password: 
+                        authorizationUrl: http://localhost/oauth/authorize
+                        tokenUrl: http://localhost/oauth/token
+                        refreshUrl: http://localhost/token/refresh
+                        scopes: 
+                    
+        
+            
+        
+    
