@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('salon_type')->nullable();
             $table->string('address')->nullable();
             $table->integer('salon_id')->nullable();
-            $table->string('status')->nullable();
+            $table->string('status')->default('active')->nullable();
             $table->string('service')->nullable();
             $table->string('lat_long')->nullable();
             $table->timestamp('email_verified_at')->nullable();
