@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class availability extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'salon_id',
+        'day',
+        'start_time',
+        'end_time',
+        
+    ];
 }
