@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+
 use App\Http\Controllers\Auth\BaseController;
 
 class AuthController extends BaseController
@@ -40,5 +41,43 @@ class AuthController extends BaseController
 
         return $this->sendResponse($success, 'User register successfully.');
 
+
     }
+
+
+    public function registersalon(Request $request)
+      {
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'mobile' => 'required|integer|unique:users',
+        'password' => 'required|string|min:8',
+        'image' => 'mimes:jpeg,jpg',
+        'address' => 'required|string',
+        'salon_type' =>'required|string',
+        'role' => 'required|string',
+        
+    ]);
+
+    if ($validator->fails()) {
+        return $this->sendError('Validation Error.', $validator->errors()); 
+    }
+
+        $input = $request->all();
+        $image_path = $request->file('image')->store('image', 'public');
+        $input['image']       = $image_path;
+        $input['password']    = bcrypt($input['password']);
+        $user                 = User::create($input);
+        $success['token']     =  $user->createToken('MyApp')->accessToken;
+        $success['name']      =  $user->name;
+        $success['email']     =  $user->email;
+        $success['mobile']    =  $user->mobile;
+        $success['address']   =  $user->address;
+        $success['salon_type']=  $user->salon_type;
+        $success['image']     =  $image_path;
+        $success['role']      =  $user->role;
+
+        return $this->sendResponse($success, 'User register successfully.');
+    
+}
 }
