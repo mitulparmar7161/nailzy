@@ -33,7 +33,7 @@ return [
                 /*
                 * Set this to `json` or `yaml` to determine which documentation file to use in UI
                 */
-                'format_to_use_for_docs' => env('L5_FORMAT_TO_USE_FOR_DOCS', 'json'),
+                'format_to_use_for_docs' => env('L5_FORMAT_TO_USE_FOR_DOCS', 'yaml'),
 
                 /*
                  * Absolute paths to directory containing the swagger annotations are stored.
@@ -176,7 +176,7 @@ return [
                 ],
                 */
 
-                /* Open API 3.0 support
+                /* Open API 3.0 support */
                 'passport' => [ // Unique name of security
                     'type' => 'oauth2', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
                     'description' => 'Laravel passport oauth2 security.',
@@ -191,6 +191,7 @@ return [
                         ],
                     ],
                 ],
+                /*
                 'sanctum' => [ // Unique name of security
                     'type' => 'apiKey', // Valid values are "basic", "apiKey" or "oauth2".
                     'description' => 'Enter token in format (Bearer <token>)',
