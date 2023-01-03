@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\auth\AuthController;
 
+use App\Http\Controllers\Auth\AuthController;
 
 
 /*
@@ -17,15 +17,18 @@ use App\Http\Controllers\auth\AuthController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+
 
 Route::post('registersalon', [AuthController::class, 'registersalon']);
 Route::post('registercustomer', [AuthController::class, 'registercustomer']);
-// Route::post('login', [RegisterController::class, 'login'])->name('login');
-// Route::post('search', [RegisterController::class, 'search']);
-     
+Route::post('login', [AuthController::class, 'login']);
+ 
 Route::middleware('auth:api')->group( function () {
     Route::resource('products', ProductController::class);
 });
+
+
+
+
+
+     
