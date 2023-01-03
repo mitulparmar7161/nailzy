@@ -135,4 +135,41 @@ public function registeremployee(Request $request)
 
 
 
+
+public function login(Request $request)
+{
+    $request->validate([
+        'email' => 'required|string|email',
+        'password' => 'required|string',
+    ]);
+
+    $credentials = request(['email', 'password']);
+
+    if (Auth::attempt($credentials)) {
+        $user = $request->user();
+        $success['token'] =  $user->createToken('MyApp')->accessToken;  
+        $success['id'] =  $user->id;
+        $success['name'] =  $user->name;
+        $success['email'] =  $user->email;
+        $success['role'] = $user->role;
+
+        return $this->sendResponse($success, 'User login successfully.');
+
+    } else {
+        return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+    }
+
+}
+
+
+
+public function logout(Request $request)
+{
+    $request->user()->token()->revoke();
+    return response()->json([
+        'message' => 'Successfully logged out'
+    ]);
+    
+
+}
 }

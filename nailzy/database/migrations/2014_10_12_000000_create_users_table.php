@@ -22,11 +22,11 @@ return new class extends Migration
             $table->string('role')->nullable();
             $table->string('device_token')->nullable();
             $table->string('device_type')->nullable();
-            $table->boolean('notification')->default(1)->nullable();
+            $table->boolean('notification')->default(1);
             $table->string('salon_type')->nullable();
             $table->string('address')->nullable();
             $table->integer('salon_id')->nullable();
-            $table->string('status')->default('active')->nullable();
+            $table->string('status')->default('active');
             $table->string('service')->nullable();
             $table->string('lat_long')->nullable();
             $table->timestamp('email_verified_at')->nullable();
