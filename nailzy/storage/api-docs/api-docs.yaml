@@ -44,7 +44,7 @@
             post: 
                 tags: 
                     - Register      
-                summary: Register salon
+                summary: Register Salon
                 requestBody: 
                     required: true
                     content: 
@@ -70,7 +70,39 @@
                     403: 
                         description: Forbidden
                     
-                
+        /api/registeremployee/: 
+            post: 
+                tags: 
+                    - Register      
+                summary: Register Employee
+                requestBody: 
+                    required: true
+                    content: 
+                        multipart/form-data: 
+                            schema: 
+                                $ref: '#/components/schemas/registeremployee'
+                responses: 
+                    201: 
+                        description: Success
+                        content: 
+                            application/json:
+                                schema:
+                                    $ref: '#/components/responses/registercustomer'
+                    401: 
+                        description: Unauthenticated
+                    
+                    400: 
+                        description: Bad Request
+                    
+                    404: 
+                        description: not found
+                    
+                    403: 
+                        description: Forbidden
+
+
+
+
         /api/login/: 
             post: 
                 tags: 
@@ -145,10 +177,6 @@
                         type: string  
                         description: device type
                         example: apple
-                    status_code: 
-                        type: integer
-                        description: 'Status code'
-                        example: 200
                     message:
                         type: string
                         description: 'Message'
@@ -192,7 +220,7 @@
                     role:
                         type: string
                         description: 'User Last Name'    
-                        example: 'Parmar'
+                        example: 'salon'
                     device_token: 
                         type: string
                         description: device token
@@ -201,10 +229,45 @@
                         type: string  
                         description: device type
                         example: apple
-                    status_code: 
+                    message:
+                        type: string
+                        description: 'Message'
+                        example: 'Success'
+            registeremployee:
+                type: object
+                properties:
+      
+                    name:
+                        type: string
+                        description: 'User First Name'
+                        example: 'Mitul'
+                    email:
+                        type: string
+                        description: 'User Email'
+                        example: 'mitul@gmail.com'
+                    mobile: 
                         type: integer
-                        description: 'Status code'
-                        example: 200
+                        description: 'User Contact'
+                        example: 9909935387
+
+                    image:
+                        type: file
+                        description: 'User Image'
+                        example: "/image/aksgd.jpg"
+
+                    role:
+                        type: string
+                        description: 'User Last Name'    
+                        example: 'Parmar'
+                    service:
+                        type: string
+                        description: employee service
+                        example: hair cut
+                    salon_id:
+                        type: integer
+                        description: employee salon id
+                        example: 1    
+
                     message:
                         type: string
                         description: 'Message'
@@ -260,8 +323,8 @@
                         example: 'Active'
                     role:
                         type: string
-                        description: 'User Last Name'    
-                        example: 'Parmar'
+                        description: 'User role'    
+                        example: 'customer'
       
 
                     notification:
