@@ -1,0 +1,127 @@
+    openapi: 3.0.0
+    info: 
+        title: TEST
+        description: 'L5 Swagger OpenApi description'
+        version: 1.0.0
+    servers:
+        - description: 'SwaggerHub API Auto Mocking'
+          url: http://127.0.0.1:8000
+
+    paths:
+        /api/home/:
+            get:
+                tags:
+                    - Home
+                summary: Home
+                description: Home
+                security:
+                  - passport: []
+                
+                parameters:
+                    - name: salon_type
+                      in: query
+                      description: salon type
+                      required: true
+                      schema:
+                        type: string
+                    - name: search
+                      in: query
+                      description: search 
+                      required: true
+                      schema:
+                        type: string
+                responses:
+                    '200':
+                        description: OK
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: success
+                                        message:
+                                            type: string
+                                            example: Home
+                                        data:
+                                            type: object
+                                            properties:
+                                                salon_type:
+                                                    type: string
+                                                    example: salon type
+                                                search:
+                                                    type: string
+                                                    example: search
+
+                    '401':
+                        description: Unauthorized
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Unauthorized
+                    '403':
+                        description: Forbidden
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Forbidden
+                    '404':
+                        description: Not Found
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Not Found
+                    '500':
+                        description: Internal Server Error
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Internal Server Error
+
+    components:
+          securitySchemes: 
+               passport: 
+                type: apiKey
+                description: Laravel passport oauth2 security.      <br><br> <h4> EXAMPLE - Bearer YourToken </h4><br>
+                in: header
+                name: authorization
+                scheme: https
+                flows: 
+                    password: 
+                        authorizationUrl: http://localhost/oauth/authorize
+                        tokenUrl: http://localhost/oauth/token
+                        refreshUrl: http://localhost/token/refresh
+                        scopes: 
+
+
+
+                        
