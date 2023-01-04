@@ -1,0 +1,38 @@
+[
+    {
+        "date_time": "2023-01-04 13:14:53",
+        "request": {
+            "method": "POST",
+            "url": "http:\/\/127.0.0.1:8000\/api\/login",
+            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzZhODFhZTI3YzMyZDdiM2ZlMGYzMTdlOTUzNmU2MzBkYmY2ZWRlYzNhNzI3YzEwOTVkMmYzYjM2NzFiMGY5YzUyNTc4YmZlYmUzYWRkM2MiLCJpYXQiOjE2NzI4MzgwOTMuOTE1NDkxLCJuYmYiOjE2NzI4MzgwOTMuOTE1NDkzLCJleHAiOjE3MDQzNzQwOTMuOTEwNTU3LCJzdWIiOiIxNyIsInNjb3BlcyI6W119.StADISmHcjzybFcx0ZCQkCeA2BN2FcSaEH55boCa9gb-qChUN-2K-jwYZwWrjVFi1uXg31TCt84sBkf3cxrkXVHS9hhtLt_LwyAxs6d3V45P-IK4qqqvU60UZnXyyp66bBaXQJ9aWeZXomwAkUfQb0ff15ofm1Cy5UasFMh1GuxQ_v1-y29zoNijjR5UKWcxLzlIZhwKp8OYliwcMTZnVuHdeAY1ouiHXxUY1wxEON9MOULzI1W2QL8ae8ryVbR1Z5sNarkC27xLS7nMdtuPs3g9I7CL-zb7n0-4Y2N0vk-iSzpVPbwYeS5QXr-jA1aCsFEJgEpTarGXvk6LNiWBE7eqZN8-nL3JoeBJUziquXMTYRBPsOeK5YUOPLwwKTqryjDt7vofH7hK0Z8EYADKIHUqBOxGLBqEtPCqkTnA0QePVv9sYw9cJzAZ7aNtSzrU_8K_qSq6KwoPB8Xl8yNp9bVbBkMGd6vNMk0nTNwY1nqEtRqAgoABtfMfPWCflUKd-w0dTTZvzvvXMSkhd3a-ssgtWG4b0k_11KJA53EMwAHLow-XAcbiHQ_UFlK-7RkbjeQyniHW_S4MnDBm5pcLzjtfoNkaSXZcdvznKtECnUnngWtluN48GOwrY8SuSZxwWZ7ShImybgik90g70U_KpI1mBObtZLBGjJkSLHOs9MQ\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-04 13:20:17",
+        "request": {
+            "method": "POST",
+            "url": "http:\/\/127.0.0.1:8000\/api\/login",
+            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGJhNDFiN2VhNjJkMTI3NjJiZjRiNTQ2MzQ0NDA4MGUyMzZlNGY3ZmJjZTk0ODk2MWQ1N2M0ZDk5ZjdhYWM3MzM4YzcxZGI3OWNhZjYzYzgiLCJpYXQiOjE2NzI4Mzg0MTcuNTEwNDIxLCJuYmYiOjE2NzI4Mzg0MTcuNTEwNDIzLCJleHAiOjE3MDQzNzQ0MTcuNTA1ODkxLCJzdWIiOiIxNyIsInNjb3BlcyI6W119.oLvjTSA072DLyhEmMV9RN3NmwBNi3EZv4TuUlM3ZSJa_qI4UegCHKafgePLjQHF2LBn7AEwnirwoiZgdwiT_-2ZUvpULegnwETNah70o7oEE7ASNwUZvthdqZW8zris-TQus3NyxWgaYexE0ui_DfptIugHr6mrQUrhRv_2i6yiTu0RsTV3ZmUmrqhMc3bjGb3cMIpKWcFDlY3aUqja8-zUYIpolnGrqM35uLs-XrPCW8jPYMXc70RjycX6EDykJpJgilxBKojSAQZ_n3kAqa_UyA4fqks63YHrEuC5q5abut7IGqy1LTunFNaAUDXy4nhTLkHBRx7Smuz5GUGabfQ9bh5T9esJ_jhzUDY0x7bhBVFsOyKJy2NCWaBNCTdm3oUqqTuS4Yg6fhUsH4CAPgWwg5ne4NXXFKHWHWKALPCxotyOhwIka8qI-jFcTOxCawFyVxl9vRTEFqhHA3v-VhbwafuAnUqr559A2ypFWH5W727cUMx0FEN7d2VLtZSLYC96cp1CavooHAEPcFdMUJE288ntLBaT7h9VcBeF3lLrIvywCFSWTuNxAKRJ3MpheoXmL6VOF9GIJ13IXVVUIawWw-2LW0wFN8I7vwDBzOrn8wRdpFOuAFFlgT26U8op_Yp1NlRzQvbs62gr8_0Y_4rYtzOjrGcMwEcqhQH4Pl4Q\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-04 13:20:19",
+        "request": {
+            "method": "POST",
+            "url": "http:\/\/127.0.0.1:8000\/api\/login",
+            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4M2U3ZWU0MDNkMDE5M2M4Y2MwYzZmZjRmOTBhOWJkNTdmMTY0MGYzY2Y5ODM0MzIyZDM2ODQzZDk3ZGVmOTA5MTg2YzQ5ZmQxZDBmNGYiLCJpYXQiOjE2NzI4Mzg0MTkuNzgxNDgsIm5iZiI6MTY3MjgzODQxOS43ODE0ODIsImV4cCI6MTcwNDM3NDQxOS43NzY1NCwic3ViIjoiMTciLCJzY29wZXMiOltdfQ.ex9ss0f43TOKSKg2q3SGI5rmJa6oA60Rs4nb-7A5h6j2JmKFmPvcFswyKNl9mqf2OetFKAnmAMenm4WUO7fiOVqoq73fWkn95mgRTMFnFnXLQMGRZFm8CbsxL_PUZZO4msLKnlObj24faexiP6Lj44Z1cCKAIb7Vzh-Vx3CoqisUZRT0a5duzk7AM0FnxF5uvzmrMrUnviihZ8gORb65WvOZZ_QIbPUoj6hlvPzXd115SdrrclakVEF4-zmgMvJ-6fWqdBflOPYnVv8AP24YZNpGz195rShXdNd17Dahj5sFY3wZMq-WDLsFTHwFkA3Dttb7OsOlOKqiK9HhleCgUwLx_zzMB00nP9hGs0t9b5y-5V5ANGNHXLWUYYMlPeqoK9qYThrZ5zod814FazgEj36uj4wN4cBGfU_c0P9__ep5Mnsjta9iBPQ7iVwGTf1p1ohwFQAu2jnaZ5GAjKeRynXXFgVkc2_HG-hgn0Ks4uCG6ZbAIP2CR5bGhrSTwBODT8-sFQbL-v4GUwwJgi2YG9rCdnrA-N5-i0UzKPWria4ojHTHMLPXNa5Y9rCvucD-SpBQyCxvzMaFGQhvmWPJMbCUWXsGLg8yoRGr4SjoGE1_mv2J2WmB7gprD1EA5Q2xSsxdV6z4OXNMk1cLEExmscdTFkBx77NbEfVH0ST-LkE\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    }
+]

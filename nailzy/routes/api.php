@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CustomerAPI\CustomerController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,12 +21,15 @@ use App\Http\Controllers\CustomerAPI\CustomerController;
 
 // Authantication Routes
 
-
+Route::middleware(['api.log'])->group(function () {
 Route::post('registersalon', [AuthController::class, 'registersalon']);
 Route::post('registercustomer', [AuthController::class, 'registercustomer']);
 Route::post('registeremployee', [AuthController::class, 'registeremployee']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api');
+});
+
+
  
 
 
