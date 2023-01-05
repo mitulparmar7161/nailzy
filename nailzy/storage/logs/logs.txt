@@ -1,30 +1,30 @@
 [
     {
-        "date_time": "2023-01-04 13:14:53",
+        "date_time": "2023-01-05 12:30:36",
         "request": {
             "method": "POST",
             "url": "http:\/\/127.0.0.1:8000\/api\/login",
-            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+            "body": "{\"email\":\"tes@gmail.com\",\"password\":\"tst@123\"}"
         },
         "response": {
-            "status": 200,
-            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzZhODFhZTI3YzMyZDdiM2ZlMGYzMTdlOTUzNmU2MzBkYmY2ZWRlYzNhNzI3YzEwOTVkMmYzYjM2NzFiMGY5YzUyNTc4YmZlYmUzYWRkM2MiLCJpYXQiOjE2NzI4MzgwOTMuOTE1NDkxLCJuYmYiOjE2NzI4MzgwOTMuOTE1NDkzLCJleHAiOjE3MDQzNzQwOTMuOTEwNTU3LCJzdWIiOiIxNyIsInNjb3BlcyI6W119.StADISmHcjzybFcx0ZCQkCeA2BN2FcSaEH55boCa9gb-qChUN-2K-jwYZwWrjVFi1uXg31TCt84sBkf3cxrkXVHS9hhtLt_LwyAxs6d3V45P-IK4qqqvU60UZnXyyp66bBaXQJ9aWeZXomwAkUfQb0ff15ofm1Cy5UasFMh1GuxQ_v1-y29zoNijjR5UKWcxLzlIZhwKp8OYliwcMTZnVuHdeAY1ouiHXxUY1wxEON9MOULzI1W2QL8ae8ryVbR1Z5sNarkC27xLS7nMdtuPs3g9I7CL-zb7n0-4Y2N0vk-iSzpVPbwYeS5QXr-jA1aCsFEJgEpTarGXvk6LNiWBE7eqZN8-nL3JoeBJUziquXMTYRBPsOeK5YUOPLwwKTqryjDt7vofH7hK0Z8EYADKIHUqBOxGLBqEtPCqkTnA0QePVv9sYw9cJzAZ7aNtSzrU_8K_qSq6KwoPB8Xl8yNp9bVbBkMGd6vNMk0nTNwY1nqEtRqAgoABtfMfPWCflUKd-w0dTTZvzvvXMSkhd3a-ssgtWG4b0k_11KJA53EMwAHLow-XAcbiHQ_UFlK-7RkbjeQyniHW_S4MnDBm5pcLzjtfoNkaSXZcdvznKtECnUnngWtluN48GOwrY8SuSZxwWZ7ShImybgik90g70U_KpI1mBObtZLBGjJkSLHOs9MQ\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+            "status": 404,
+            "body": "{\"success\":false,\"message\":\"Unauthorised.\",\"status\":404,\"data\":{\"error\":\"Unauthorised\"}}"
         }
     },
     {
-        "date_time": "2023-01-04 13:20:17",
+        "date_time": "2023-01-05 12:30:38",
         "request": {
             "method": "POST",
             "url": "http:\/\/127.0.0.1:8000\/api\/login",
-            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+            "body": "{\"email\":\"tes@gmail.com\",\"password\":\"tst@123\"}"
         },
         "response": {
-            "status": 200,
-            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGJhNDFiN2VhNjJkMTI3NjJiZjRiNTQ2MzQ0NDA4MGUyMzZlNGY3ZmJjZTk0ODk2MWQ1N2M0ZDk5ZjdhYWM3MzM4YzcxZGI3OWNhZjYzYzgiLCJpYXQiOjE2NzI4Mzg0MTcuNTEwNDIxLCJuYmYiOjE2NzI4Mzg0MTcuNTEwNDIzLCJleHAiOjE3MDQzNzQ0MTcuNTA1ODkxLCJzdWIiOiIxNyIsInNjb3BlcyI6W119.oLvjTSA072DLyhEmMV9RN3NmwBNi3EZv4TuUlM3ZSJa_qI4UegCHKafgePLjQHF2LBn7AEwnirwoiZgdwiT_-2ZUvpULegnwETNah70o7oEE7ASNwUZvthdqZW8zris-TQus3NyxWgaYexE0ui_DfptIugHr6mrQUrhRv_2i6yiTu0RsTV3ZmUmrqhMc3bjGb3cMIpKWcFDlY3aUqja8-zUYIpolnGrqM35uLs-XrPCW8jPYMXc70RjycX6EDykJpJgilxBKojSAQZ_n3kAqa_UyA4fqks63YHrEuC5q5abut7IGqy1LTunFNaAUDXy4nhTLkHBRx7Smuz5GUGabfQ9bh5T9esJ_jhzUDY0x7bhBVFsOyKJy2NCWaBNCTdm3oUqqTuS4Yg6fhUsH4CAPgWwg5ne4NXXFKHWHWKALPCxotyOhwIka8qI-jFcTOxCawFyVxl9vRTEFqhHA3v-VhbwafuAnUqr559A2ypFWH5W727cUMx0FEN7d2VLtZSLYC96cp1CavooHAEPcFdMUJE288ntLBaT7h9VcBeF3lLrIvywCFSWTuNxAKRJ3MpheoXmL6VOF9GIJ13IXVVUIawWw-2LW0wFN8I7vwDBzOrn8wRdpFOuAFFlgT26U8op_Yp1NlRzQvbs62gr8_0Y_4rYtzOjrGcMwEcqhQH4Pl4Q\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+            "status": 404,
+            "body": "{\"success\":false,\"message\":\"Unauthorised.\",\"status\":404,\"data\":{\"error\":\"Unauthorised\"}}"
         }
     },
     {
-        "date_time": "2023-01-04 13:20:19",
+        "date_time": "2023-01-05 12:30:44",
         "request": {
             "method": "POST",
             "url": "http:\/\/127.0.0.1:8000\/api\/login",
@@ -32,7 +32,55 @@
         },
         "response": {
             "status": 200,
-            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ4M2U3ZWU0MDNkMDE5M2M4Y2MwYzZmZjRmOTBhOWJkNTdmMTY0MGYzY2Y5ODM0MzIyZDM2ODQzZDk3ZGVmOTA5MTg2YzQ5ZmQxZDBmNGYiLCJpYXQiOjE2NzI4Mzg0MTkuNzgxNDgsIm5iZiI6MTY3MjgzODQxOS43ODE0ODIsImV4cCI6MTcwNDM3NDQxOS43NzY1NCwic3ViIjoiMTciLCJzY29wZXMiOltdfQ.ex9ss0f43TOKSKg2q3SGI5rmJa6oA60Rs4nb-7A5h6j2JmKFmPvcFswyKNl9mqf2OetFKAnmAMenm4WUO7fiOVqoq73fWkn95mgRTMFnFnXLQMGRZFm8CbsxL_PUZZO4msLKnlObj24faexiP6Lj44Z1cCKAIb7Vzh-Vx3CoqisUZRT0a5duzk7AM0FnxF5uvzmrMrUnviihZ8gORb65WvOZZ_QIbPUoj6hlvPzXd115SdrrclakVEF4-zmgMvJ-6fWqdBflOPYnVv8AP24YZNpGz195rShXdNd17Dahj5sFY3wZMq-WDLsFTHwFkA3Dttb7OsOlOKqiK9HhleCgUwLx_zzMB00nP9hGs0t9b5y-5V5ANGNHXLWUYYMlPeqoK9qYThrZ5zod814FazgEj36uj4wN4cBGfU_c0P9__ep5Mnsjta9iBPQ7iVwGTf1p1ohwFQAu2jnaZ5GAjKeRynXXFgVkc2_HG-hgn0Ks4uCG6ZbAIP2CR5bGhrSTwBODT8-sFQbL-v4GUwwJgi2YG9rCdnrA-N5-i0UzKPWria4ojHTHMLPXNa5Y9rCvucD-SpBQyCxvzMaFGQhvmWPJMbCUWXsGLg8yoRGr4SjoGE1_mv2J2WmB7gprD1EA5Q2xSsxdV6z4OXNMk1cLEExmscdTFkBx77NbEfVH0ST-LkE\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZGI2NmRhNDZjMDdlMGY2MDYwZjYyYzdjNWVjZTRiY2RmMTI0NjA4MTk2YzRlZDE1MTFjODEwNDdjMGQwYmQ2NmEwNjc2YmI1YzNhMWM1YmIiLCJpYXQiOjE2NzI5MjE4NDQuOTA3NDQ0LCJuYmYiOjE2NzI5MjE4NDQuOTA3NDQ3LCJleHAiOjE3MDQ0NTc4NDQuOTAyNTYxLCJzdWIiOiIxNyIsInNjb3BlcyI6W119.blpgDbgr3XWqvqIzwCXzEKOnTgsV0Ra-2UODX33ioATa-tOhOG8TQWK0TOQt9mPGhfUFZ0_u2-cdGRDhIXoKGQbgeaxnH-GDZ-p1aocCsFsN1dLyerCz22p2sperWmYLIKG2lDByFD87ZhoQ8LuyuG5x2pr-5iSPyYckDOXsqwyx0LFsiGt84j4bUnQIXT8E7gMTBLVnQzASySXYeSz38I6MscRq1Vs61k0DHfVXHS2SDL277dSBe1QRm3b9U1AVhXiRCPHzXlk4VimEzWD7WVfq-SCJezgsLj9BMDZ2TlKcCWn7UNzsJPaO6F4z24_2nXxm--cr3natNoANCT1hi3pbIdMp6_1H-Jki1_RwYU4VLGlm8OXCfn8E0gNnJCzueqxXgN7I-DsZy755wchrv6dNM7x4HLBz4xifYh2hjJ2_dZh38LrwfY5OxzMmuyEPMv5VKUujn3kuurOxejLzD19aUplwXa-E1y0u9EqyYFnRv9oyh1rdPpUPdLEc_8UiG8I-bj6FfTCZkg-RyovsSKmJL8XDBa7iSpbMt5FTzmvE89a22SmII4I6CHfcuHci0kcj1SpPIOW5pGiUWyoeUk3SKvRwzBYwRPD_loI1QiSxoAd02XocDpq4PJZOMWiUFzyo9VYkU0Jhggd0puCKx-yDMmMlmtZ2c8C91jqfpL0\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-05 12:30:47",
+        "request": {
+            "method": "POST",
+            "url": "http:\/\/127.0.0.1:8000\/api\/login",
+            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNThhZGIxMzMzZDA0MDRkMzc5M2QxYWM4YTZhMjRlYzE0OWMzNjIzNjZmODRiNmE4ZDVkOGQ5NjExMmUzNTBlYjY4ZWVhZTEwOTYyMmEwYWYiLCJpYXQiOjE2NzI5MjE4NDcuNTQ1NzM1LCJuYmYiOjE2NzI5MjE4NDcuNTQ1NzM3LCJleHAiOjE3MDQ0NTc4NDcuNTQxNDY3LCJzdWIiOiIxNyIsInNjb3BlcyI6W119.fgcUp1RCDONSq6NBXbnQGuyBjYvCoP2y5WemJb488UrXlZdNEAFr90qeJWcFHt4H6ff19fWsvr4ZuV4hU6PFEDEudWd-dyFAcdCg1ckZnfSq4EeilB2pPQQtJzj7o7zav55RVaXzYPAKov_PCLdvUIQiLH2GnW8bcajfO7BkdK6TXyU9JJpH3GtqCzpd7Q22qCi_ANrQIrJcpSNzqfTvSNnjS_Nsl62Acvr5JDqx1493IF9_OVReW3vOgzIUieGyZ7Soj2351JF0iP2b6jJkFPiLdfQ-U1n2W4kR771jKK_4JEgNEvQbFAa2qemA09FVt4KJo1BPBKT72xTwz2Bh-cMUT6MsznxsoWTPlW58S3hN5s3384dcYs13TtOFXEp4byizv-PwaHQOW9Z4bBs9gHIkRAgQlcmF6JMpz4HnrZt1MTDFgewH6Fo3XIq8lbd-HgUMygNuS6KhwKp2hfJ3qWvf3h8-N5oiPL5FHJRKUQs0ZLU5gwEoJIIUsux0c3UwG75CIMTqEvS-OMH4eV3fB9_ufxnNYGReNir3ES3Es6WBJMKaH4GsXl6ZAmGuW-_9AT1FACPSUlarF6EwkjuFwxqMi8Fnbo2XqZN_1fN-1OANRhr298u8ZYW8MqmtP5gA5EPcFk4brgjoATpYMitM7CWmxxQZBA7sIQaSLuCGoRY\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-05 12:42:33",
+        "request": {
+            "method": "POST",
+            "url": "http:\/\/127.0.0.1:8000\/api\/login",
+            "body": "{\"email\":\"test@gmail.com\",\"password\":\"test@123\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"success\":true,\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYWFlMzJlNjE2ZjQ1OWEzZjlkZmVlYjdlNjJmMGJlYmY5MDRhMGZmNjc3NmJjODUxYjBjNTJkYzQ5Mjg5ODExYjQ5NWEzMzkzNzU2YjE2ZDkiLCJpYXQiOjE2NzI5MjI1NTMuNTE3NjQ1LCJuYmYiOjE2NzI5MjI1NTMuNTE3NjUxLCJleHAiOjE3MDQ0NTg1NTMuNTEyMjI1LCJzdWIiOiIxNyIsInNjb3BlcyI6W119.PLu6QwnjDVho9VQzvkOFYw68D6bdoKdnNrQmtjdPyviN0R6hgLeKepaDaeiJAikpRb5fTHr1_wvXAbvHCMDhj7ONHC0DchWw673rmPNMr6mV1Fe7vPHgmJlHZc3ktmAE-pwNbhL9gEsl7Om1CWuYq3LHFRYk29cMuTJClEgJCJGreeokFcXE8zJG5olF_bVMWYfR680_32ZpmIVu0VOA5F-QD6j5Q_osBsy2fLV0yyoCteBoAhhBLj495skrBlKkmLP7ThXmp-DRRmsBleRLKk2zFfbaeNypML2AKZJ62yT3FvST7ghIq_e2L0pW0E5JLcORxRJ-QRUCY-rSodWkSU1bGroWQO5DT7f62zE32VY2VNvIWDXmXhM271-Ou1sLC_KdRhlrOQIXpF5jGNaOpTvYmqmOuc_iarBD65WISs-NtqoAdgYRqRyUhF99kPDNMdaUFRK_f7_BqXUQ3n_9o-MB9sbmZ_dwevFwyeUpSp6K51p8jePwEWMRdLXqI26gbcmYW81d_w9uUn7QaXMC7oYh8J4ntJ2YNvED7FuYGMbEIcMquF0Fj6wDQlM8LwBbxUOLG3fn9X47k-T3YurjCsCh-IR_3BbuYaVFrKCxSD7lTpwAdl5SNv8wK1xLegQ3Gvf1_6t0j0pPrwg9fmVPLosFTlYZ_vf2KUKE7iJ9zr0\",\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"role\":\"employee\"},\"message\":\"User login successfully.\",\"status\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-05 12:43:25",
+        "request": {
+            "method": "GET",
+            "url": "http:\/\/127.0.0.1:8000\/api\/home?salon_type=home&search=mitul",
+            "body": "{\"salon_type\":\"home\",\"search\":\"mitul\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"status\":\"success\",\"data\":[{\"id\":7,\"name\":\"Mitul\",\"email\":\"mitulxvxvx@gmail.com\",\"mobile\":990112335387,\"image\":\"image\\\/customer\\\/lEjEN7FUv9Xqh6glBkxZWN7EnFxfNplO1D2cbRhI.png\",\"role\":\"salon\",\"device_token\":null,\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"home\",\"address\":null,\"salon_id\":null,\"status\":\"Active\",\"service\":\"hair cut\",\"lat_long\":\"234E 134n\",\"email_verified_at\":null,\"created_at\":\"2023-01-03T07:26:03.000000Z\",\"updated_at\":\"2023-01-03T07:26:03.000000Z\",\"deleted_at\":null},{\"id\":8,\"name\":\"Mitul\",\"email\":\"mitulxv71233x@gmail.com\",\"mobile\":992335387,\"image\":\"image\\\/customer\\\/DGQA8oLGf1KWS1fzmHZM7k9RYRFuEL8y5zQsl54V.png\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"home\",\"address\":null,\"salon_id\":null,\"status\":\"Active\",\"service\":\"hair cut\",\"lat_long\":\"234E 134n\",\"email_verified_at\":null,\"created_at\":\"2023-01-03T07:28:06.000000Z\",\"updated_at\":\"2023-01-03T07:28:06.000000Z\",\"deleted_at\":null},{\"id\":10,\"name\":\"Mitul\",\"email\":\"mit2ul@gmail.com\",\"mobile\":9909335387,\"image\":\"image\\\/Qjz4IR20D5IpXvjukT2T9gS0EJR8BbkpgMHcmj8u.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"home\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T08:48:23.000000Z\",\"updated_at\":\"2023-01-03T08:48:23.000000Z\",\"deleted_at\":null},{\"id\":11,\"name\":\"Mitul\",\"email\":\"mi1stul@gmail.com\",\"mobile\":1909935387,\"image\":\"image\\\/salon\\\/0W0Pnou3xXsYcL408IUT295BcyNmt8m2gsEirfXx.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"home\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T08:56:41.000000Z\",\"updated_at\":\"2023-01-03T08:56:41.000000Z\",\"deleted_at\":null},{\"id\":12,\"name\":\"Mitul\",\"email\":\"mi1s2ul@gmail.com\",\"mobile\":1909931387,\"image\":\"image\\\/salon\\\/KJCyICoa4HzUy71aLpweowxwWdfFBH6mXMWqg6GI.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"home\",\"address\":\"123123\",\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T09:01:46.000000Z\",\"updated_at\":\"2023-01-03T09:01:46.000000Z\",\"deleted_at\":null}],\"status_code\":200}"
+        }
+    },
+    {
+        "date_time": "2023-01-05 12:44:53",
+        "request": {
+            "method": "GET",
+            "url": "http:\/\/127.0.0.1:8000\/api\/home?salon_type=salon&search=mitul",
+            "body": "{\"salon_type\":\"salon\",\"search\":\"mitul\"}"
+        },
+        "response": {
+            "status": 200,
+            "body": "{\"status\":\"success\",\"data\":[{\"id\":1,\"name\":\"mitul\",\"email\":\"mitul6261@gmail.com\",\"mobile\":9909933388,\"image\":\"image\\\/customer\\\/70KamPhr18VjmfHYyp6ZNjT9gyap121y7dbM76We.jpg\",\"role\":\"customer\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T06:11:08.000000Z\",\"updated_at\":\"2023-01-03T06:11:08.000000Z\",\"deleted_at\":null},{\"id\":2,\"name\":\"mitul\",\"email\":\"mitul6271@gmail.com\",\"mobile\":9989933388,\"image\":\"image\\\/customer\\\/kAQ4RPLvrk7nIP03G7Xsmx6kafEYLzQgLeLeEk9W.jpg\",\"role\":\"customer\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T06:12:33.000000Z\",\"updated_at\":\"2023-01-03T06:12:33.000000Z\",\"deleted_at\":null},{\"id\":3,\"name\":\"mitul\",\"email\":\"mitul6211@gmail.com\",\"mobile\":9919933388,\"image\":\"image\\\/customer\\\/LRlgkX9uM0ZystSFbZtsYbsr411SCfTHaW0vHklg.jpg\",\"role\":\"customer\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T06:15:28.000000Z\",\"updated_at\":\"2023-01-03T06:15:28.000000Z\",\"deleted_at\":null},{\"id\":4,\"name\":\"mitul\",\"email\":\"mitul61211@gmail.com\",\"mobile\":9919933318,\"image\":\"image\\\/customer\\\/tEpsFWz2a6oToNVx33V98L5uRa6Jkv6L02zgdoab.jpg\",\"role\":\"customer\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T06:16:06.000000Z\",\"updated_at\":\"2023-01-03T06:16:06.000000Z\",\"deleted_at\":null},{\"id\":6,\"name\":\"mitul\",\"email\":\"mitul61123211@gmail.com\",\"mobile\":1,\"image\":\"image\\\/customer\\\/OKGcJuiMXoiutyBpT7ROKO4tPTc2XudlrE5Qy9fZ.jpg\",\"role\":\"customer\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T06:19:19.000000Z\",\"updated_at\":\"2023-01-03T06:19:19.000000Z\",\"deleted_at\":null},{\"id\":9,\"name\":\"Mitul\",\"email\":\"mitul123@gmail.com\",\"mobile\":9919935387,\"image\":\"image\\\/customer\\\/cIkUkRCww1GdM8R7ylKgRGj24ooMnlmuFwI1nFrn.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T07:29:07.000000Z\",\"updated_at\":\"2023-01-03T07:29:07.000000Z\",\"deleted_at\":null},{\"id\":13,\"name\":\"Mitul\",\"email\":\"mi123tul123@gmail.com\",\"mobile\":9909915387,\"image\":\"image\\\/customer\\\/F7cbqNTEkZIsguGXGrbM5tLDuYqSxAlHFsg82KGV.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T09:05:34.000000Z\",\"updated_at\":\"2023-01-03T09:05:34.000000Z\",\"deleted_at\":null},{\"id\":14,\"name\":\"Mitul\",\"email\":\"mi1213tul123@gmail.com\",\"mobile\":9109915387,\"image\":\"image\\\/customer\\\/uFy8iEFm6MHuKFNBejrKiLoHVqqvg11rq9eDrW0N.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T09:10:17.000000Z\",\"updated_at\":\"2023-01-03T09:10:17.000000Z\",\"deleted_at\":null},{\"id\":15,\"name\":\"Mitul\",\"email\":\"mitu765l@gmail.com\",\"mobile\":9904335387,\"image\":\"image\\\/customer\\\/qJAtSdfbQnRKDfUHKqiyIYkqBRU8bT3OwfHw3sgM.jpg\",\"role\":\"salon\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":null,\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T09:10:52.000000Z\",\"updated_at\":\"2023-01-03T09:10:52.000000Z\",\"deleted_at\":null},{\"id\":16,\"name\":\"Mitul\",\"email\":\"mit121313ul@gmail.com\",\"mobile\":9909313387,\"image\":\"image\\\/employee\\\/gfbcHHVosdTED65b7q7xvbYfTLnbcVq7kUYtqCdl.jpg\",\"role\":\"employee\",\"device_token\":null,\"device_type\":null,\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":1,\"status\":null,\"service\":\"hair cut\",\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T09:35:02.000000Z\",\"updated_at\":\"2023-01-03T09:35:02.000000Z\",\"deleted_at\":null},{\"id\":17,\"name\":\"Mitul\",\"email\":\"test@gmail.com\",\"mobile\":9909935380,\"image\":\"image\\\/customer\\\/fL3tFN0DeUMwf8mtpdLmTr4R5KHwoTjdzc4AErCr.jpg\",\"role\":\"employee\",\"device_token\":\"8123tojsags76761twjsagi61fslqj1we\",\"device_type\":\"apple\",\"notification\":1,\"salon_type\":\"salon\",\"address\":null,\"salon_id\":null,\"status\":\"active\",\"service\":null,\"lat_long\":null,\"email_verified_at\":null,\"created_at\":\"2023-01-03T10:40:25.000000Z\",\"updated_at\":\"2023-01-03T10:40:25.000000Z\",\"deleted_at\":null}],\"status_code\":200}"
         }
     }
 ]

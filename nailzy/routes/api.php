@@ -27,7 +27,7 @@ Route::post('registercustomer', [AuthController::class, 'registercustomer']);
 Route::post('registeremployee', [AuthController::class, 'registeremployee']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api');
-});
+
 
 
  
@@ -43,7 +43,7 @@ Route::middleware('auth:api')->group( function () {
     Route::get('home', [CustomerController::class, 'home'])->name('home');
 });
 
-
+});
 
 
 
