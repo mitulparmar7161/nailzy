@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [AdminController::class, 'index']);
+
+Route::view('/admin', 'admin.apilog');

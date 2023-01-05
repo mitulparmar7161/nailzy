@@ -23,10 +23,10 @@
             <th>{{ $row['request']['url'] }}</th>
             <th>{{ $row['request']['body'] }}</th>
             <td>{{ $row['response']['status'] }}</td>
-            <th>{{ $row['response']['body'] }}</th>
+            <td>{{ $row['response']['body'] }}</td>
         </tr>
         @endforeach
-
+        {{ $data->links() }}
     
     </tbody>
 </table>
