@@ -8,12 +8,12 @@
           url: http://127.0.0.1:8000
 
     paths:
-        /api/home/:
+        /api/salondetails/:
             get:
                 tags:
-                    - Home
-                summary: Home
-                description: Home
+                    - Details
+                summary: Details
+                description: Details
                 security:
                   - passport: []
                 
@@ -107,6 +107,244 @@
                                             type: string
                                             example: Internal Server Error
 
+
+        /api/salonreviews/:
+            get:
+                tags:
+                    - Reviews
+                summary: Reviews
+                description: Reviews
+                security:
+                  - passport: []
+                parameters:
+                  - name: salon_id
+                    in: query
+                    description: salon id
+                    required: true
+                    schema:
+                      type: integer 
+                responses:
+                    200:
+                      description: Reviews
+                      content: 
+                        application/json:
+                          schema:
+                            type: object
+                            properties:
+                              status:
+                                type: string
+                                example: success
+                              message:
+                                type: string
+                                example: Reviews
+                              data:
+                                type: object
+                                properties:
+                                  salon_comment:
+                                    type: string
+                                    example: this is comment
+                                  salon_rating:
+                                    type: integer
+                                    example: 5
+                                  customer_id:
+                                    type: integer
+                                    example: 1
+                                  customer_name:
+                                    type: string
+                                    example: customer name  
+                    '401':
+                        description: Unauthorized
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Unauthorized
+                    '403':
+                        description: Forbidden
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Forbidden
+                    '404':
+                        description: Not Found
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Not Found
+                    '500':
+                        description: Internal Server Error
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Internal Server Error
+        /api/employeereviews/:
+            get:
+                tags:
+                    - Reviews
+                summary: Reviews
+                description: Reviews
+                security:
+                  - passport: []
+                parameters:
+                  - name: salon_id
+                    in: query
+                    description: salon id
+                    required: true
+                    schema:
+                      type: integer 
+                responses:
+                    200:
+                      description: Reviews
+                      content: 
+                        application/json:
+                          schema:
+                            type: object
+                            properties:
+                              status:
+                                type: string
+                                example: success
+                              message:
+                                type: string
+                                example: Reviews
+                              data:
+                                type: object
+                                properties:
+                                  salon_comment:
+                                    type: string
+                                    example: this is comment
+                                  salon_rating:
+                                    type: integer
+                                    example: 5
+                                  customer_id:
+                                    type: integer
+                                    example: 1
+                                  customer_name:
+                                    type: string
+                                    example: customer name  
+                    '401':
+                        description: Unauthorized
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Unauthorized
+                    '403':
+                        description: Forbidden
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Forbidden
+                    '404':
+                        description: Not Found
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Not Found
+                    '500':
+                        description: Internal Server Error
+                        content:
+                            application/json:
+                                schema:
+                                    type: object
+                                    properties:
+                                        status:
+                                            type: string
+                                            example: error
+                                        message:
+                                            type: string
+                                            example: Internal Server Error
+        /api/employeedetails:
+            get:
+                tags:
+                - Details
+                summary: Details
+                description: Details
+                security:
+                  - passport: []
+                parameters:
+                  - name: employee_id
+                    in: query
+                    description: employee id
+                    required: true
+                    schema:
+                      type: integer 
+                responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string
+
+        /api/services:
+            get:
+                tags:
+                - Services
+                summary: Services
+                description: Services
+                security:
+                  - passport: []
+                parameters:
+                  - name: salon_id
+                    in: query
+                    description: salon id
+                    required: true
+                    schema:
+                      type: integer 
+                responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string                           
     components:
           securitySchemes: 
                passport: 

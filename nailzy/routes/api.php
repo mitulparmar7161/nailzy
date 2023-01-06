@@ -40,7 +40,12 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api')
 
 
 Route::middleware('auth:api')->group( function () {
-    Route::get('home', [CustomerController::class, 'home'])->name('home');
+    Route::get('salondetails', [CustomerController::class, 'salondetails'])->name('salondetails');
+    Route::get('salonreviews', [CustomerController::class, 'salonreviews'])->name('salonreviews');
+    Route::get('employeereviews', [CustomerController::class, 'employeereviews'])->name('employeereviews');
+    Route::get('employeedetails', [CustomerController::class, 'employeedetails'])->name('employeedetails');
+    Route::get('services', [CustomerController::class, 'services'])->name('services');
+    
 });
 
 });

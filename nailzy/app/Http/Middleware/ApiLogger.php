@@ -17,16 +17,22 @@ class ApiLogger
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+
+
+   
+
     public function handle(Request $request, Closure $next)
     {
-
-        // Log::info('API Request', [
+        $response = $next($request);
+        
+        if (config('app.log') == 1) {
+                   // Log::info('API Request', [
         //     'method' => $request->method(),
         //     'url' => $request->fullUrl(),
         //     'body' => $request->all(),
         // ]);
 
-        $response = $next($request);
+   
 
         // Log the request and response
         $log =  [
@@ -73,6 +79,9 @@ class ApiLogger
         }
 
 
+            
+        }
+ 
       
         return $response;
     }

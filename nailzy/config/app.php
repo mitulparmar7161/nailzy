@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'log' => 0,
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
