@@ -8,6 +8,54 @@
           url: http://127.0.0.1:8000
 
     paths:
+        /api/filters/:
+            get:
+              tags:
+                - "Details"
+              summary: "Flters" 
+              description: "Filters"
+              security:
+                - passport: []
+              parameters:
+                - name: salon_type
+                  in: query
+                  description: salon type
+                  required: true
+                  schema:
+                    type: string
+                - name: service_price
+                  in: query
+                  description: service price 
+                  required: true
+                  schema:
+                    type: string
+                - name: latitude
+                  in: query
+                  description: lat
+                  required: true
+                  schema:
+                    type: string
+                - name: longitude
+                  in: query
+                  description: long
+                  required: true
+                  schema:
+                    type: string
+                - name: range
+                  in: query
+                  description: range
+                  required: true
+                  schema:
+                    type: integer
+              responses:
+                200:
+                  description: Description
+                  content: 
+                    application/json:
+                      schema:
+                        type: string       
+
+
         /api/salondetails/:
             get:
                 tags:
@@ -344,7 +392,136 @@
                       content: 
                         application/json:
                           schema:
-                            type: string                           
+                            type: string      
+
+        /api/bookingslot:
+              post:
+                tags:
+                  - Services
+                summary: Booking Services
+                description: Booking Services
+                security:
+                  - passport: []
+                requestBody:
+                  required: true
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          salon_id:
+                            type: integer
+                            example: 15
+                          service_id:
+                            type: array
+                            example: [1,2]
+                          date:
+                            type: string
+                            example: 2023-01-16
+
+                responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string 
+
+        /api/confirmbooking:
+                  post:
+                    tags:
+                      - Services
+                    summary: Confirm Booking Services
+                    description: Confirm Booking Services
+                    security:
+                      - passport: []
+                    requestBody:
+                        required: true
+                        content:
+                          application/json:
+                            schema:
+                              type: object
+                              properties:
+                                salon_id:
+                                  type: integer
+                                  example: 15
+                                service_id:
+                                  type: array
+                                  example: [1,2]
+                                booking_date:
+                                  type: string
+                                  example: 2023-01-16
+                                timeslot_start:
+                                  type: string
+                                  example: 10:00
+                                timeslot_end:
+                                  type: string
+                                  example: 11:00
+                                billing_cost:
+                                  type: integer
+                                  example: 1000
+                                booking_remark:
+                                  type: string
+                                  example: this is booking remarks
+                                booking_status:
+                                  type: string
+                                  example: panding  
+                                              
+                    responses:
+                     200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string  
+
+        /api/customerhistory:
+                get:
+                  tags:
+                  - History
+                  summary: Customer History
+                  description: Customer History
+                  security:
+                    - passport: []
+                  parameters: 
+                    - name: booking_status
+                      in: query
+                      description: booking status
+                      required: true
+                      schema:
+                        type: string
+                  responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string
+
+        /api/customerhistorydetails:
+                get:
+                  tags:
+                  - History
+                  summary: Customer History in Detail
+                  description: Customer History in Detail
+                  security:
+                    - passport: []
+                  parameters: 
+                    - name: booking_id
+                      in: query
+                      description: booking id
+                      required: true
+                      schema:
+                        type: string
+                  responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string
+
+
     components:
           securitySchemes: 
                passport: 

@@ -264,6 +264,16 @@
                         type: string
                         description: 'Message'
                         example: 'Success'
+                    
+                    latitude:
+                        type: integer
+                        description: 'latitude'
+                        example: 23.074582521927628 
+                    longitude:
+                        type: integer
+                        description: 'longitude'
+                        example: 72.52613887007172
+
             registeremployee:
                 type: object
                 properties:

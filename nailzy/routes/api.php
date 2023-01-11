@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CustomerAPI\CustomerController;
-
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,10 +45,22 @@ Route::middleware('auth:api')->group( function () {
     Route::get('employeereviews', [CustomerController::class, 'employeereviews'])->name('employeereviews');
     Route::get('employeedetails', [CustomerController::class, 'employeedetails'])->name('employeedetails');
     Route::get('services', [CustomerController::class, 'services'])->name('services');
-    
-});
+    Route::post('bookingslot', [CustomerController::class, 'bookingslot'])->name('bookingslot');
+    Route::post('confirmbooking', [CustomerController::class, 'confirmbooking'])->name('confirmbooking');
+    Route::get('filters',[CustomerController::class, 'filters'])->name('filters');
+    Route::get('customerhistory',[CustomerController::class, 'customerhistory'])->name('customerhistory');
+    Route::get('customerhistorydetails',[CustomerController::class, 'customerhistorydetails'])->name('customerhistorydetails');
+
+
+
+
+    Route::delete('deleteprofile/{id}', [SettingsController ::class, 'deleteprofile'])->name('deleteprofile');
+
+    ROute::post('changepassword', [SettingsController ::class, 'changepassword'])->name('changepassword');
 
 });
+
+}); 
 
 
 
