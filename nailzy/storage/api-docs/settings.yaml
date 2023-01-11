@@ -1,0 +1,85 @@
+
+    openapi: 3.0.0
+    info: 
+        title: TEST
+        description: 'L5 Swagger OpenApi description'
+        version: 1.0.0
+    servers:
+        - description: 'SwaggerHub API Auto Mocking'
+          url: http://127.0.0.1:8000
+
+    paths:
+        /api/deleteprofile/{id}: 
+              delete:
+               tags: 
+                   - Delete Profile
+               summary: Delete Profile
+               description: Delete Profile
+               security:
+                  - passport: []
+               parameters:
+                  - name: id
+                    in: path
+                    description: id
+                    required: true  
+                    schema:
+                      type: integer
+              
+               responses:
+                  200:
+                    description: Description
+                    content: 
+                      application/json:
+                        schema:
+                          type: string
+        /api/changepassword/:
+              post:
+                tags:
+                  - Change Password
+                summary: Change Password
+                description: Change Password
+                security:
+                  - passport: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          old_password:
+                            type: string
+                          new_password:
+                            type: string
+                          confirm_password:
+                            type: string
+                responses:
+                  200:
+                    description: Description
+                    content: 
+                      application/json:
+                        schema:
+                          type: string
+
+
+
+              
+
+    components:
+        securitySchemes: 
+            passport: 
+                type: apiKey
+                description: Laravel passport oauth2 security.      <br><br> <h4> EXAMPLE - Bearer YourToken </h4><br>
+                in: header
+                name: authorization
+                scheme: https
+                flows: 
+                    password: 
+                        authorizationUrl: http://localhost/oauth/authorize
+                        tokenUrl: http://localhost/oauth/token
+                        refreshUrl: http://localhost/token/refresh
+                        scopes: 
+                    
+        
+            
+        
+    

@@ -28,7 +28,8 @@ return new class extends Migration
             $table->integer('salon_id')->nullable();
             $table->string('status')->default('active');
             $table->string('service')->nullable();
-            $table->string('lat_long')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->rememberToken()->nullable();

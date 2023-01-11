@@ -42,6 +42,7 @@ class AuthController extends BaseController
         $success['device_token'] =  $user->device_token;
         $success['device_type'] =  $user->device_type;
         $success['notification'] =  $user->notification;
+
         
 
         return $this->sendResponse($success, 'User register successfully.');
@@ -61,6 +62,8 @@ class AuthController extends BaseController
         'address' => 'required|string',
         'salon_type' =>'required|string',
         'role' => 'required|string',
+        'latitude' => 'required|string',
+        'longitude' => 'required|string',
         
     ]);
 
@@ -89,7 +92,8 @@ class AuthController extends BaseController
         $success['device_token'] =  $user->device_token;
         $success['device_type'] =  $user->device_type;
         $success['notification'] =  $user->notification;
-
+        $success['latitude'] =  $user->latitude;
+        $success['longitude'] =  $user->longitude;
 
         return $this->sendResponse($success, 'User register successfully.');
     
@@ -169,7 +173,5 @@ public function logout(Request $request)
     return response()->json([
         'message' => 'Successfully logged out'
     ]);
-    
-
 }
 }

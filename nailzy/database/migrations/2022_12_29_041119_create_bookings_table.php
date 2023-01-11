@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('salon_id');
-            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('employee_id')->nullable();
             $table->unsignedBigInteger('customer_id');
             $table->date('booking_date');
-            $table->dateTime('timeslot_start');
-            $table->dateTime('timeslot_end');
+            $table->time('timeslot_start');
+            $table->time('timeslot_end');
             $table->double('billing_cost');
             $table->text('booking_remark');
             $table->string('booking_status');
