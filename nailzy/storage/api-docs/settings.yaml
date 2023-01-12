@@ -9,6 +9,57 @@
           url: http://127.0.0.1:8000
 
     paths:
+        /api/getprofile/:
+            get:
+              tags:
+                - Edit Profile
+              summary: Getprofile
+              description: Getprofile
+              security:
+                - passport: []
+              responses:
+                200:
+                  description: Description
+                  content: 
+                    application/json:
+                      schema:
+                        type: string
+        /api/updateprofile/:
+              post:
+                tags:
+                  - Edit Profile
+                summary: Update Profile
+                description: Update Profile
+                security:
+                  - passport: []
+                requestBody:
+                  content:
+                    multipart/form-data:
+                      schema:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          email:
+                            type: string
+                          mobile:
+                            type: string
+                          address:
+                            type: string
+                          salon_type: 
+                            type: string  
+                          image:
+                            type: file
+                responses:  
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string
+
+
+
         /api/deleteprofile/{id}: 
               delete:
                tags: 
@@ -59,10 +110,116 @@
                       application/json:
                         schema:
                           type: string
+        /api/terms/:
+            get:
+              tags:
+                - Terms
+              summary: Terms
+              description: Terms
+              security:
+                - passport: []
+              responses:
+                200:
+                  description: Description
+                  content: 
+                    application/json:
+                      schema:
+                        type: string
+
+        /api/faqs/:
+            get:
+              tags:
+                - Faqs
+              summary: Faqs
+              description:  Faqs
+              security:
+                - passport: []
+              responses:
+                200:
+                  description: Description
+                  content: 
+                    application/json:
+                      schema:
+                        type: string
+
+        /api/policies/:
+            get:
+              tags:
+                - Policies
+              summary: Policies
+              description:  Policies
+              security:
+                - passport: []
+              responses:
+                200:
+                  description: Description
+                  content: 
+                    application/json:
+                      schema:
+                        type: string
+        /api/contactus/:
+              post:
+               tags:
+                - Contact Us
+               summary: Contact Us
+               description: Contact Us
+               security:
+                  - passport: []
+               requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          email:
+                            type: string
+                          mobile:
+                            type: string
+                          message:
+                            type: string
+               responses:
+                  200:
+                    description: Description
+                    content: 
+                      application/json:
+                        schema:
+                          type: string
+
+        /api/support/:
+              post:
+               tags:
+                -  Support
+               summary: Support
+               description:   Support
+               security:
+                  - passport: []
+               requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          email:
+                            type: string
+                          mobile:
+                            type: string
+                          message:
+                            type: string
+                          title:
+                            type: string  
+               responses:
+                  200:
+                    description: Description
+                    content: 
+                      application/json:
+                        schema:
+                          type: string
 
 
-
-              
 
     components:
         securitySchemes: 
