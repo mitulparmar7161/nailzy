@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->integer('mobile');
+            $table->bigInteger('mobile');
             $table->text('message');
-            $table->string('status');
+            $table->string('status')->default('pending');
             $table->timestamps();
             $table->softDeletes('deleted_at');
         });

@@ -40,6 +40,7 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api')
 
 
 Route::middleware('auth:api')->group( function () {
+    
     Route::get('salondetails', [CustomerController::class, 'salondetails'])->name('salondetails');
     Route::get('salonreviews', [CustomerController::class, 'salonreviews'])->name('salonreviews');
     Route::get('employeereviews', [CustomerController::class, 'employeereviews'])->name('employeereviews');
@@ -50,13 +51,28 @@ Route::middleware('auth:api')->group( function () {
     Route::get('filters',[CustomerController::class, 'filters'])->name('filters');
     Route::get('customerhistory',[CustomerController::class, 'customerhistory'])->name('customerhistory');
     Route::get('customerhistorydetails',[CustomerController::class, 'customerhistorydetails'])->name('customerhistorydetails');
+    Route::post('addreviews',[CustomerController::class, 'addreviews'])->name('addreviews');
 
 
 
 
     Route::delete('deleteprofile/{id}', [SettingsController ::class, 'deleteprofile'])->name('deleteprofile');
 
-    ROute::post('changepassword', [SettingsController ::class, 'changepassword'])->name('changepassword');
+    Route::post('changepassword', [SettingsController ::class, 'changepassword'])->name('changepassword');
+
+    Route::get('terms', [SettingsController ::class, 'terms'])->name('terms');
+
+    Route::get('faqs', [SettingsController ::class, 'faqs'])->name('faqs');
+
+    Route::get('policies', [SettingsController ::class, 'policies'])->name('policies');
+
+    Route::get('getprofile', [SettingsController ::class, 'getprofile'])->name('getprofile');
+
+    Route::post('updateprofile', [SettingsController ::class, 'updateprofile'])->name('updateprofile');
+
+    Route::post('contactus', [SettingsController ::class, 'contactus'])->name('contactus');
+
+    Route::post('support', [SettingsController ::class, 'support'])->name('support');
 
 });
 

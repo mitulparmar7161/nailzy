@@ -16,6 +16,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\Validator;
+use App\Models\salon_review;
+use App\Models\employee_review;
 
 class CustomerController extends Controller
 {
@@ -599,6 +601,61 @@ class CustomerController extends Controller
                 'status_code' => 401,
             ], 401);
         }
+
+    }
+
+
+
+
+    public function addreviews(Request $request){
+
+            if(Auth::check()){
+                
+
+                $request = $request->all();
+
+
+                $validator = Validator::make($request, [
+                    'salon_id' => 'required',
+                    'salon_rating' => 'required',
+                    'salon_comment' => 'required',
+                    'employee_id' => 'required',
+                    'employee_rating' => 'required',
+                    'employee_comment' => 'required',
+                ]);
+                
+
+                if($validator->fails()){
+                    return response()->json([
+                        'status' => 'error',
+                        'message' => $validator->errors(),
+                        'status_code' => 400,
+                    ], 400);  
+                }
+                
+                $request['customer_id'] = Auth::user()->id; 
+
+                $salon_review = salon_review::create($request);
+
+                $employee_review = employee_review::create($request);
+                
+                return response()->json([
+                    'status' => 'success',
+                    'data' => [
+                        $salon_review,
+                        $employee_review
+                    ],
+                    'status_code' => 200,
+                ], 200);
+
+            }
+            else {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'You are not logged in',
+                    'status_code' => 401,
+                ], 401);
+            }
 
     }
 

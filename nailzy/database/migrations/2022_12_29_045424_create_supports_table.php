@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('supports', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('mobile');
+            $table->bigInteger('mobile');
             $table->string('email');
             $table->string('title');
             $table->text('message');
-            $table->string('status');
+            $table->string('status')->default('pending');
             $table->timestamps();
             $table->softDeletes('deleted_at');
         });

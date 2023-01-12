@@ -520,7 +520,47 @@
                         application/json:
                           schema:
                             type: string
-
+        /api/addreviews:
+                post:
+                  tags:
+                  - Reviews
+                  summary: Add Reviews
+                  description: Add Reviews
+                  security:
+                    - passport: []
+                  requestBody:
+                    required: true
+                    content:
+                      application/json:
+                        schema:
+                          type: object
+                          properties:
+                            salon_comment:
+                              type: string
+                              example: this is comment
+                            salon_rating:
+                              type: integer
+                              example: 5
+                            salon_id:
+                              type: integer
+                              example: 2
+                            employee_comment:
+                              type: string
+                              example: this is comment
+                            employee_rating:
+                              type: integer
+                              example: 5
+                            employee_id:
+                              type: integer
+                              example: 3
+                              
+                  responses:
+                    200:
+                      description: Description
+                      content: 
+                        application/json:
+                          schema:
+                            type: string
 
     components:
           securitySchemes: 
