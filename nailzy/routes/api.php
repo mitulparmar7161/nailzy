@@ -3,9 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\CustomerAPI\CustomerController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\SalonAPI\SalonController;
+use App\Http\Controllers\CustomerAPI\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +76,21 @@ Route::middleware('auth:api')->group( function () {
     Route::post('support', [SettingsController ::class, 'support'])->name('support');
 
 });
+
+
+// Salon Routes
+
+
+    Route::middleware('auth:api')->group(function () {
+
+
+        Route::post('addservice', [SalonController::class, 'addservice'])->name('addservice');
+        
+        Route::get('getservices', [SalonController::class, 'getservices'])->name('getservices');
+
+        
+
+    });
 
 }); 
 

@@ -1,0 +1,115 @@
+
+    openapi: 3.0.0
+    info: 
+        title: TEST
+        description: 'L5 Swagger OpenApi description'
+        version: 1.0.0
+    servers:
+        - description: 'SwaggerHub API Auto Mocking'
+          url: http://127.0.0.1:8000
+
+    paths:
+      /api/addservice:
+          post:
+            tags:
+              - "Services"
+            summary: "Add Service"
+            description: "Add Service"
+            security:
+              - passport: []
+            requestBody:
+              required: true
+              content:
+                multipart/form-data:
+                  schema:
+                    $ref: '#/components/schemas/Service'
+            responses:
+              200:
+                description: "Success"
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Service'
+              401:
+                description: "Unauthorized"
+              422:
+                description: "Unprocessable Entity"
+              500:
+                description: "Internal Server Error"
+      /api/getservices/:
+              get:
+                tags:
+                  - "Services"
+                summary: "Get Services"
+                description: "Get Services"
+                security:
+                  - passport: []
+                parameters:
+                  - name: salon_id
+                    in: query
+                    description: "Salon Id"
+                    required: true
+                    schema:
+                      type: integer
+                      example: 1
+                responses:
+                  200:
+                    description: "Success"
+                    content:
+                      application/json:
+                        schema:
+                          $ref: '#/components/schemas/Service'
+                  401:
+                    description: "Unauthorized"
+                  422:
+                    description: "Unprocessable Entity"
+                  500:
+                    description: "Internal Server Error"
+
+
+
+
+
+    
+    components:
+
+        schemas:
+            Service:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "Hair Cut"
+                description:
+                  type: string
+                  example: "Hair Cut"
+                price:
+                  type: integer
+                  example: 100
+                offer_price:
+                  type: integer
+                  example: 100
+                approx_time:
+                  type: integer
+                  example: 100
+                image[]:
+                 type: array
+                 items:
+                    type: string
+                    format: binary  
+                    example: "image/image.png"
+
+
+        securitySchemes: 
+            passport: 
+                type: apiKey
+                description: Laravel passport oauth2 security.      <br><br> <h4> EXAMPLE - Bearer YourToken </h4><br>
+                in: header
+                name: authorization
+                scheme: https
+                flows: 
+                    password: 
+                        authorizationUrl: http://localhost/oauth/authorize
+                        tokenUrl: http://localhost/oauth/token
+                        refreshUrl: http://localhost/token/refresh
+                        scopes: 

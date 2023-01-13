@@ -464,6 +464,11 @@ class CustomerController extends Controller
                 $booking_service->save();
             }
 
+
+            $sendNotification = (new \App\Jobs\SendNotification('Service Booking', 'Your Service has been booked successful','123123123123', 'android', $booking ,"1"));
+
+            dispatch($sendNotification);
+
             return response()->json([   
                 'status' => 'success',
                 'data' => $booking,

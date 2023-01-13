@@ -129,7 +129,7 @@ public function registeremployee(Request $request)
     $success['status']    =  $user->status;
     $success['service'] =  $user->service;
     $success['salon_id'] =  $user->salon_id;    
-
+    
     
 
     return $this->sendResponse($success, 'User register successfully.');
@@ -157,10 +157,15 @@ public function login(Request $request)
         $success['email'] =  $user->email;
         $success['role'] = $user->role;
 
+
+
         return $this->sendResponse($success, 'User login successfully.');
 
+
     } else {
+
         return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+
     }
 
 }
