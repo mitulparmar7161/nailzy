@@ -320,11 +320,11 @@
                     email:  
                         type: string
                         description: 'User Email'
-                        example: '@gmail.com'
+                        example: 'mitul@gmail.com'
                     password:
                         type: string
                         description: 'User Password'
-                        example: ''
+                        example: 'password@123'
 
             logout:
                 type: object
